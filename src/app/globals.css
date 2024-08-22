@@ -2,32 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+
+  :root  {
+    --background: 198.4 0% 100%;
+    --foreground: 198.4 0% 10%;
+    --card: 198.4 0% 100%;
+    --card-foreground: 198.4 0% 15%;
+    --popover: 198.4 0% 100%;
+    --popover-foreground: 198.4 95% 10%;
+    --primary: 198.4 93.2% 59.6%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 198.4 10% 90%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 160.4 10% 95%;
+    --muted-foreground: 198.4 0% 40%;
+    --accent: 160.4 10% 90%;
+    --accent-foreground: 198.4 0% 15%;
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 198.4 0% 100%;
+    --border: 198.4 20% 82%;
+    --input: 198.4 20% 50%;
+    --ring: 198.4 93.2% 59.6%;
+    --radius: 0.5rem;
+  }
+  .dark  {
+    --background: 198.4 10% 10%;
+    --foreground: 198.4 0% 100%;
+    --card: 198.4 0% 10%;
+    --card-foreground: 198.4 0% 100%;
+    --popover: 198.4 10% 5%;
+    --popover-foreground: 198.4 0% 100%;
+    --primary: 198.4 93.2% 59.6%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 198.4 10% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 160.4 10% 25%;
+    --muted-foreground: 198.4 0% 65%;
+    --accent: 160.4 10% 25%;
+    --accent-foreground: 198.4 0% 95%;
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 198.4 0% 100%;
+    --border: 198.4 20% 50%;
+    --input: 198.4 20% 50%;
+    --ring: 198.4 93.2% 59.6%;
+    --radius: 0.5rem;
+  }
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+
+/* EMBLA SLIDER */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }
