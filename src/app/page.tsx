@@ -86,28 +86,27 @@ export default function Home() {
 
 
       {/* WORK SECTION */}
-      <div className="h-screen flex items-center justify-center text-center">
+      <div className="min-h-screen flex items-center justify-center text-center py-16">
         <div className="text-2xl font-bold md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl">Some of my<span><WordRotate words={["Work", "Experience", "Projects"]}/></span></div>
       </div>
       
       {/* CARDS */}
-      <div className="flex justify-center items-center">
-        <div className="container py-24 lg:py-32">
+      <div className="flex justify-center items-center py-16">
+        <div className="container">
           <div className="max-w-6xl mx-auto">
             <Cards/>
           </div>
         </div>
       </div>
 
-
       {/* RESUME SECTION */}
-      <div className="h-screen flex items-center justify-center text-center">
+      <div className="min-h-screen flex items-center justify-center text-center py-16">
         <div className="text-2xl font-bold md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl">Resume</div>
       </div>
       
       {/* RESUME */}
-      <div className="flex flex-col items-center">
-        <div className="container py-12 lg:py-16">
+      <div className="flex flex-col items-center py-16">
+        <div className="container">
           <div className="max-w-lg mx-auto shadow-2xl">
             <img src="/Resume.jpg" alt="Resume" className="w-full h-auto" />
           </div>
@@ -123,10 +122,3 @@ export default function Home() {
     </>
   );
 }
-
-
-
-
-
-
-
