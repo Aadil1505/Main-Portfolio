@@ -1,9 +1,9 @@
 "use client"
 
-import { ContactRound, FileText, FolderGit2, Github, HomeIcon, Linkedin, UserRoundPen } from "lucide-react";
+import { ContactRound, FileText, FolderGit2, Github, HomeIcon, Linkedin, Mail, Smartphone, UserRoundPen } from "lucide-react";
 // import Link from "next/link";
 import { Dock, DockIcon } from "@/components/magicui/dock";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
@@ -11,6 +11,7 @@ import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { Link } from 'next-view-transitions';
 import React, { useEffect, useState } from "react";
 import { ModeToggle } from "./ModeToggle";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog"
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -39,11 +40,11 @@ const DATA = {
         url: "https://www.linkedin.com/in/aadil-alli/",
         icon: Icons.linkedin,
       },
-      Contact: {
-        name: "Send Email",
-        url: "/next",
-        icon: Icons.contact,
-      },
+      // Contact: {
+      //   name: "Send Email",
+      //   url: "/next",
+      //   icon: Icons.contact,
+      // },
     },
   },
 };
@@ -106,7 +107,7 @@ export default function DockDemo() {
                 </DockIcon>
               ))}
               <Separator orientation="vertical" className="h-full" />
-              {Object.entries(DATA.contact.social).map(([name, social]) => (
+              {/* {Object.entries(DATA.contact.social).map(([name, social]) => (
                 <DockIcon key={name}>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -125,7 +126,51 @@ export default function DockDemo() {
                     </TooltipContent>
                   </Tooltip>
                 </DockIcon>
-              ))}
+              ))} */}
+                <DockIcon>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button className="size-12 rounded-full" variant="ghost" size="icon">
+                        <ContactRound className="size-4"/>
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle>Contact Info</DialogTitle>
+                        <DialogDescription>
+                        <div className="flex items-center mt-4">
+                          <Smartphone className="flex-shrink-0 h-5 w-5" />
+                          <h3 className="ms-3 text-sm font-semibold">
+                            646-338-4179
+                          </h3>
+                        </div>
+                        <div className="flex items-center mt-4">
+                          <Mail className="flex-shrink-0 h-5 w-5" />
+                          <h3 className="ms-3 text-sm font-semibold">
+                            aadil15alli@gmail.com
+                          </h3>
+                        </div>
+                        <div className="mt-4">
+                          <Link className="flex items-center hover:text-secondary-foreground" href="https://github.com/Aadil1505">                          
+                            <Github className="flex-shrink-0 h-5 w-5" />
+                            <h3 className="ms-3 text-sm font-semibold">
+                              Aadil1505
+                            </h3>
+                          </Link>
+                        </div>
+                        <div className="mt-4">
+                          <Link className="flex items-center hover:text-secondary-foreground" href="https://www.linkedin.com/in/aadil-alli/">                          
+                            <Linkedin className="flex-shrink-0 h-5 w-5" />
+                            <h3 className="ms-3 text-sm font-semibold">
+                              Aadil Alli
+                            </h3>
+                          </Link>
+                        </div>
+                        </DialogDescription>
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
+                </DockIcon>
               <Separator orientation="vertical" className="h-full py-2" />
               <DockIcon>
                 <Tooltip>
