@@ -1,11 +1,11 @@
 import Slider from "@/components/sections/Slider";
-import { Building2Icon, ThumbsUpIcon, Users2Icon } from "lucide-react";
+import { Lock, Mail, UsersRound } from "lucide-react";
 
 export default function Page() {
   const images = [
-    { src: "https://placehold.co/1024x480", alt: "Description of image 1" },
-    { src: "https://placehold.co/1024x480", alt: "Description of image 2" },
-    { src: "https://placehold.co/1024x480", alt: "Description of image 3" },
+    { src: "https://aadil-alli.vercel.app/assets/mailServer-jYf_Ldcx.png", alt: "Description of image 1" },
+    { src: "https://placehold.co/1920x1080", alt: "Description of image 2" },
+    { src: "https://placehold.co/1920x1080", alt: "Description of image 3" },
   ]
   return (
     <>
@@ -27,7 +27,7 @@ export default function Page() {
               className="rounded-xl"
               alt="Image Description"
             /> */}
-            <Slider images={images} autoplay={true} aspectRatio={16/7}/>
+            <Slider images={images} autoplay={true} aspectRatio={16/9}/>
           </div>
         </div>
       </div>
@@ -40,22 +40,22 @@ export default function Page() {
           {/* Grid */}
           <div className="grid gap-12">
             <div>
-              <h2 className="text-3xl font-bold lg:text-4xl">Our vision</h2>
+              <h2 className="text-3xl font-bold lg:text-4xl">CS Technician</h2>
               <p className="mt-3 text-muted-foreground">
-                For as long as there have been cities, the public square has
-                been a fundamental part of the urban landscape - an open,
-                approachable space to meet and engage with friends and
-                neighbours. Space aims to capture this spirit of bringing people
-                together in an exciting, welcoming environment.
+                As a Computer Science Technician, I have worked and even lead tons of projects 
+                that were required or needed by Hofstra&apos;s Computer Science Department. However, 
+                below are some of the most complex projects that are/will soon be in production 
+                that took months of work including learning to navigate linux and the terminal, 
+                reading open source software documentation, and intricate web development tasks.
               </p>
             </div>
             <div className="space-y-6 lg:space-y-10">
               {/* Icon Block */}
               <div className="flex">
-                <Building2Icon className="flex-shrink-0 mt-2 h-6 w-6" />
+                <Mail className="flex-shrink-0 mt-2 h-6 w-6" />
                 <div className="ms-5 sm:ms-8">
                   <h3 className="text-base sm:text-lg font-semibold">
-                    High quality Co-Living spaces
+                    Enterprise Grade Email Server
                   </h3>
                   <p className="mt-1 text-muted-foreground">
                     Our fully furnished spaces are designed and purpose-built
@@ -68,10 +68,10 @@ export default function Page() {
               {/* End Icon Block */}
               {/* Icon Block */}
               <div className="flex">
-                <Users2Icon className="flex-shrink-0 mt-2 h-6 w-6" />
+                <Lock className="flex-shrink-0 mt-2 h-6 w-6" />
                 <div className="ms-5 sm:ms-8">
                   <h3 className="text-base sm:text-lg font-semibold">
-                    Fostering vibrant communities
+                    Multifactor Authentication for SSH
                   </h3>
                   <p className="mt-1 text-muted-foreground">
                     Our passion is bringing people together. Beyond creating
@@ -82,10 +82,10 @@ export default function Page() {
               {/* End Icon Block */}
               {/* Icon Block */}
               <div className="flex">
-                <ThumbsUpIcon className="flex-shrink-0 mt-2 h-6 w-6" />
+                <UsersRound className="flex-shrink-0 mt-2 h-6 w-6" />
                 <div className="ms-5 sm:ms-8">
                   <h3 className="text-base sm:text-lg font-semibold">
-                    Simple and all-inclusive
+                    GPU Cluster Account Management System
                   </h3>
                   <p className="mt-1 text-muted-foreground">
                     We worry about the details so that our residents don&apos;t

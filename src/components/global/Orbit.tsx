@@ -1,5 +1,5 @@
 import OrbitingCircles from "@/components/magicui/orbiting-circles";
-import { CodeXml, Gamepad2, Github, Laptop } from "lucide-react";
+import { Circle, CodeXml, Gamepad2, Github, Laptop } from "lucide-react";
 
 export function OrbitingCirclesDemo() {
   return (
@@ -15,6 +15,7 @@ export function OrbitingCirclesDemo() {
       >
         <BasketballIcon className=""/>
       </OrbitingCircles>
+
       <OrbitingCircles
         className="size-[30px] border-none bg-transparent"
         duration={20}
@@ -62,10 +63,8 @@ const BasketballIcon = ({ size = 24, color = "currentColor", className = "" }) =
       className={className}
     >
       {/* Basketball circle */}
-      <path d="M12,12m-10,0a10,10 0 1,0 20,0a10,10 0 1,0 -20,0" />
+      <Circle/>
       {/* Curved lines */}
-      <path d="M12,2a10,10 0 0,1 0,20a10,10 0 0,0 0,-20" />
-      <path d="M2,12a10,10 0 0,1 20,0a10,10 0 0,0 -20,0" />
       <path d="M5.5,5.5a10,10 0 0,1 13,13a10,10 0 0,0 -13,-13" />
       <path d="M18.5,5.5a10,10 0 0,0 -13,13a10,10 0 0,1 13,-13" />
       <line x1="12" y1="2" x2="12" y2="22" />

@@ -1,22 +1,21 @@
 "use client"
 
-import { CalendarIcon, Github, HomeIcon, Linkedin, MailIcon, PencilIcon } from "lucide-react";
+import { ContactRound, FileText, FolderGit2, Github, HomeIcon, Linkedin, UserRoundPen } from "lucide-react";
 // import Link from "next/link";
-import { Link } from 'next-view-transitions'
-import React, { useEffect, useState } from "react";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
+import { Link } from 'next-view-transitions';
+import React, { useEffect, useState } from "react";
 import { ModeToggle } from "./ModeToggle";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
-  calendar: (props: IconProps) => <CalendarIcon {...props} />,
-  email: (props: IconProps) => <MailIcon {...props} />,
+  contact: (props: IconProps) => <ContactRound {...props} />,
   linkedin: (props: IconProps) => <Linkedin {...props} />,
   github: (props: IconProps) => <Github {...props} />,
 };
@@ -24,7 +23,9 @@ const Icons = {
 const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "About me" },
+    { href: "/#About", icon: UserRoundPen, label: "About me" },
+    { href: "/#Work", icon: FolderGit2, label: "Work" },
+    { href: "/#Resume", icon: FileText, label: "Resume" },
   ],
   contact: {
     social: {
@@ -35,13 +36,13 @@ const DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/aadil-alli/",
         icon: Icons.linkedin,
       },
-      Email: {
+      Contact: {
         name: "Send Email",
         url: "/next",
-        icon: Icons.email,
+        icon: Icons.contact,
       },
     },
   },

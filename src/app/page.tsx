@@ -49,7 +49,7 @@ export default function Home() {
 
 
       {/* ABOUT ME SECTION */}
-      <div className="z-10 flex min-h-[16rem] items-center justify-center text-center">
+      <div id="About" className="z-10 flex min-h-[16rem] items-center justify-center text-center">
         <TextReveal text="About me"/>
       </div>
 
@@ -86,7 +86,7 @@ export default function Home() {
 
 
       {/* WORK SECTION */}
-      <div className="h-screen flex items-center justify-center text-center">
+      <div id="Work" className="h-screen flex items-center justify-center text-center">
         <div className="text-2xl font-bold md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl">Some of my<span><WordRotate words={["Work", "Experience", "Projects"]}/></span></div>
       </div>
       
@@ -101,7 +101,7 @@ export default function Home() {
 
 
       {/* RESUME SECTION */}
-      <div className="h-screen flex items-center justify-center text-center">
+      <div id="Resume" className="h-screen flex items-center justify-center text-center">
         <div className="text-2xl font-bold md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl">Resume</div>
       </div>
       

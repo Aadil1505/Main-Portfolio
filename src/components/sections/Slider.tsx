@@ -20,7 +20,7 @@ interface EmblaCarouselProps {
 }
 
 export default function EmblaCarousel({ images, autoplay, aspectRatio }: EmblaCarouselProps) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, autoplay ? [Autoplay({delay: 5000})] : [])
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, autoplay ? [Autoplay({delay: 10000})] : [])
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
 
@@ -54,6 +54,7 @@ export default function EmblaCarousel({ images, autoplay, aspectRatio }: EmblaCa
   }, [emblaApi])
 
   return (
+    <>
     <div className='embla mx-auto mt-12'>
       <div className='embla__viewport' ref={emblaRef}>
         <div className='embla__container h-full'>
@@ -63,7 +64,7 @@ export default function EmblaCarousel({ images, autoplay, aspectRatio }: EmblaCa
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="rounded-md object-cover"
+                  className="rounded-md"
                 />
               </AspectRatio>
             </div>
@@ -71,6 +72,7 @@ export default function EmblaCarousel({ images, autoplay, aspectRatio }: EmblaCa
         </div>
       </div>
 
+    </div>
       <div className='mt-10 flex justify-center items-center gap-4'>
         <div>
           <Button variant="ghost" size="icon" onClick={scrollPrev}>
@@ -91,6 +93,7 @@ export default function EmblaCarousel({ images, autoplay, aspectRatio }: EmblaCa
           ))}
         </div>
       </div>
-    </div>
+    </>
+    
   )
 }
