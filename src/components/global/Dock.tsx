@@ -134,7 +134,7 @@ export default function DockDemo() {
                         <ContactRound className="size-4"/>
                       </Button>
                     </DialogTrigger>
-                    <DialogContent>
+                    <DialogContent className="rounded-lg max-w-md">
                       <DialogHeader>
                         <DialogTitle>Contact Info</DialogTitle>
                         <DialogDescription>
