@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
           <AArrowUp className="h-6 w-6" />
-          <span className="text-lg font-semibold">Aadil's Portfolio</span>
+          <span className="text-lg font-semibold">Aadil&apos;s Portfolio</span>
         </Link>
         <nav className="flex flex-wrap items-center gap-x-4">
           <Button variant="ghost" asChild>
