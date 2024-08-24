@@ -1,5 +1,6 @@
 import Slider from "@/components/sections/Slider";
 import { Lock, Mail, UsersRound } from "lucide-react";
+import { Badge } from "@/components/ui/badge"
 
 export default function Page() {
   const images = [
@@ -22,11 +23,6 @@ export default function Page() {
             </p>
           </div>
           <div className="mt-10 relative max-w-3xl mx-auto">
-            {/* <img
-              src="https://placehold.co/1024x480"
-              className="rounded-xl"
-              alt="Image Description"
-            /> */}
             <Slider images={images} autoplay={true} aspectRatio={16/9}/>
           </div>
         </div>
@@ -58,11 +54,28 @@ export default function Page() {
                     Enterprise Grade Email Server
                   </h3>
                   <p className="mt-1 text-muted-foreground">
-                    Our fully furnished spaces are designed and purpose-built
-                    with Co-Living in mind, featuring high-end finishes and
-                    amenities that go far beyond traditional apartment
-                    buildings.
+                  The Computer Science department at Hofstra unfortunately had 
+                  a breech in its email server, allowing the infiltrator to send 
+                  thousands of phishing emails in a matter of seconds to both the 
+                  department's faculty and staff. After shutting it down to prevent 
+                  any further attacks, I was tasked with implementing a complex 
+                  server that would protect the department from a future attacker. 
+                  After researching packages and solutions to secure the new server,
+                  I documented and executed a build guide and had it reviewed for 
+                  approval. The mail server build consists of a security-hardened 
+                  configuration of email internet and industry standard protocols and 
+                  packages including Postfix, SSHGuard, and many other necessary components, 
+                  with TLS encryption, DKIM signing, DMARC verification, SPF verification, 
+                  stricter relay controls, antivirus scanning, spam filters, realtime 
+                  blacklist checks, rate limiting, additional client restrictions, 
+                  authentication requirements, and added logging. The mail server is 
+                  currently in a production environment deployed on AWS.
                   </p>
+                  <div className="mt-4 flex gap-x-4">
+                    <Badge variant="outline">Rocky Linux</Badge>
+                    <Badge variant="outline">AWS</Badge>
+                    <Badge variant="outline">Postfix</Badge>
+                  </div>
                 </div>
               </div>
               {/* End Icon Block */}
@@ -77,6 +90,11 @@ export default function Page() {
                     Our passion is bringing people together. Beyond creating
                     beautiful spaces, we provide shared experiences.
                   </p>
+                  <div className="mt-4 flex gap-x-4">
+                    <Badge variant="outline">Rocky Linux</Badge>
+                    <Badge variant="outline">SSH</Badge>
+                    <Badge variant="outline">PrivacyIdea</Badge>
+                  </div>
                 </div>
               </div>
               {/* End Icon Block */}
@@ -93,6 +111,11 @@ export default function Page() {
                     all-inclusive billing we aim to make the living experience
                     as effortless as possible.
                   </p>
+                  <div className="mt-4 flex gap-x-4">
+                    <Badge variant="outline">Nodejs</Badge>
+                    <Badge variant="outline">Ejs</Badge>
+                    <Badge variant="outline">Github</Badge>
+                  </div>
                 </div>
               </div>
               {/* End Icon Block */}

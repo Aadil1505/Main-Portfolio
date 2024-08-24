@@ -49,7 +49,7 @@ export default function Home() {
 
 
       {/* ABOUT ME SECTION */}
-      <div id="About" className="z-10 flex min-h-[16rem] items-center justify-center text-center">
+      <div id="About" className="z-10 flex min-h-screen items-center justify-center text-center">
         <TextReveal text="About me"/>
       </div>
 
