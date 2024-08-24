@@ -57,7 +57,7 @@ export default function Page() {
                   The Computer Science department at Hofstra unfortunately had 
                   a breech in its email server, allowing the infiltrator to send 
                   thousands of phishing emails in a matter of seconds to both the 
-                  department's faculty and staff. After shutting it down to prevent 
+                  department&apos;s faculty and staff. After shutting it down to prevent 
                   any further attacks, I was tasked with implementing a complex 
                   server that would protect the department from a future attacker. 
                   After researching packages and solutions to secure the new server,
