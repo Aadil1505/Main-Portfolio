@@ -6,6 +6,7 @@ import { ViewTransitions } from 'next-view-transitions'
 import { ThemeProvider } from "@/components/ui/theme-provider"
 import DockDemo from "@/components/global/Dock";
 import PageParticles from "@/components/global/PageParticles";
+import Footer from "@/components/global/Footer";
 
 
 
@@ -34,7 +35,7 @@ export default function RootLayout({
                 <PageParticles />
                 {children}
               </main>
-              {/* <Footer /> */}
+              <Footer />
           </ThemeProvider>
         </body>
       </html>
