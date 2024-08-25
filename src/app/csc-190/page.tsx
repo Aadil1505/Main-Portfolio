@@ -58,55 +58,13 @@ export default function Page() {
                   traditional grocery shopping ten times quicker.
                   </p>
                   <div className="mt-4 flex gap-x-4">
-                    <Badge variant="outline">Next Js</Badge>
-                    <Badge variant="outline">React</Badge>
+                    <Badge variant="outline">Nextjs</Badge>
                     <Badge variant="outline">MongoDB</Badge>
                     <Badge variant="outline">APIs</Badge>
-                    <Badge variant="outline">Tesseract OCR</Badge>
+                    <Badge variant="outline">OCR</Badge>
                   </div>
                 </div>
               </div>
-              {/* End Icon Block */}
-              {/* Icon Block */}
-              <div className="flex">
-                <Lock className="flex-shrink-0 mt-2 h-6 w-6" />
-                <div className="ms-5 sm:ms-8">
-                  <h3 className="text-base sm:text-lg font-semibold">
-                    Multifactor Authentication for SSH
-                  </h3>
-                  <p className="mt-1 text-muted-foreground">
-                    Our passion is bringing people together. Beyond creating
-                    beautiful spaces, we provide shared experiences.
-                  </p>
-                  <div className="mt-4 flex gap-x-4">
-                    <Badge variant="outline">Rocky Linux</Badge>
-                    <Badge variant="outline">SSH</Badge>
-                    <Badge variant="outline">PrivacyIdea</Badge>
-                  </div>
-                </div>
-              </div>
-              {/* End Icon Block */}
-              {/* Icon Block */}
-              <div className="flex">
-                <UsersRound className="flex-shrink-0 mt-2 h-6 w-6" />
-                <div className="ms-5 sm:ms-8">
-                  <h3 className="text-base sm:text-lg font-semibold">
-                    GPU Cluster Account Management System
-                  </h3>
-                  <p className="mt-1 text-muted-foreground">
-                    We worry about the details so that our residents don&apos;t
-                    have to. From our online application process to simple,
-                    all-inclusive billing we aim to make the living experience
-                    as effortless as possible.
-                  </p>
-                  <div className="mt-4 flex gap-x-4">
-                    <Badge variant="outline">Nodejs</Badge>
-                    <Badge variant="outline">Ejs</Badge>
-                    <Badge variant="outline">Github</Badge>
-                  </div>
-                </div>
-              </div>
-              {/* End Icon Block */}
             </div>
           </div>
           {/* End Grid */}
