@@ -47,9 +47,9 @@ export default function Cards() {
           className="w-20 h-20 object-contain"
         />
       ),
-      title: "Makerspace",
+      title: "CSC-190 / Software Engineering",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
-      path: "/hofstra",
+      path: "/csc-190",
     },
     {
       icon: (

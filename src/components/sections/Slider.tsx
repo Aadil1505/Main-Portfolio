@@ -62,7 +62,7 @@ export default function EmblaCarousel({ images, autoplay, aspectRatio }: EmblaCa
             <div key={index} className='embla__slide flex items-center justify-center'>
               <AspectRatio ratio={aspectRatio}>
                 <img
-                  src={image.src}
+                  src={image.src || "https://placehold.co/1920x1080"}
                   alt={image.alt}
                   className='rounded-md'
                 />
