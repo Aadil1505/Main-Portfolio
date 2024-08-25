@@ -12,6 +12,8 @@ export default function Cards() {
       ),
       title: "CS Technician",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
+      
+      path: "/hofstra",
     },
     {
       icon: (
@@ -23,6 +25,7 @@ export default function Cards() {
       ),
       title: "Basketball",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
+      path: "/hofstra",
     },
     {
       icon: (
@@ -34,6 +37,7 @@ export default function Cards() {
       ),
       title: "Villaumite",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
+      path: "/villaumite",
     },
     {
       icon: (
@@ -45,6 +49,7 @@ export default function Cards() {
       ),
       title: "Makerspace",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
+      path: "/hofstra",
     },
     {
       icon: (
@@ -56,6 +61,7 @@ export default function Cards() {
       ),
       title: "Hofstra",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
+      path: "/hofstra",
     },
     {
       icon: (
@@ -67,6 +73,7 @@ export default function Cards() {
       ),
       title: "Hofstra",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
+      path: "/hofstra",
     },
   ];
 
@@ -76,8 +83,8 @@ export default function Cards() {
         <div className="relative mt-12">
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((item, idx) => (
-              <Link key={idx} href="/hofstra" className="hover:backdrop-blur hover:-translate-y-2 ease-in-out duration-300">              
-                <li className="bg-transparent transform-gpu space-y-3 p-4 border rounded-xl">
+              <Link key={idx} href={item.path} className="hover:backdrop-blur hover:-translate-y-2 ease-in-out duration-300">              
+                <li className="bg-transparent transform-gpu space-y-3 p-4 border rounded-xl shadow-xl">
                   <div className="p-4 transform-gpu w-fit">
                     {item.icon}
                   </div>

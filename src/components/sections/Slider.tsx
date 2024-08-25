@@ -55,7 +55,7 @@ export default function EmblaCarousel({ images, autoplay, aspectRatio }: EmblaCa
 
   return (
     <>
-    <div className='embla mx-auto mt-12'>
+    <div className='embla mx-auto mt-12 shadow-lg rounded-md border'>
       <div className='embla__viewport' ref={emblaRef}>
         <div className='embla__container h-full'>
           {images.map((image, index) => (
@@ -64,7 +64,7 @@ export default function EmblaCarousel({ images, autoplay, aspectRatio }: EmblaCa
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="rounded-md"
+                  className='rounded-md'
                 />
               </AspectRatio>
             </div>
