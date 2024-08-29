@@ -30,7 +30,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
         <head>
-          {/* CHANGES IMAGES TO BE HOSTED ON THIS SITE INSTEAD*/}
+          {/* CHANGE IMAGES TO BE HOSTED ON THIS SITE INSTEAD*/}
           <meta property="og:url" content="https://portfolio-test-theta.vercel.app/"/>
           <meta property="og:type" content="website"/>
           <meta property="og:title" content="Aadil's Portfolio"/>

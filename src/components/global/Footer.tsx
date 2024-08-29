@@ -9,7 +9,8 @@ export default function Footer() {
     <footer className="p-6 md:py-12 w-full shadow border-t backdrop-blur">
       <div className="container max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <AArrowUp className="h-6 w-6" />
+        <img src="/Favicon.svg" className="h-7 w-7"/>
+          {/* <AArrowUp className="h-6 w-6" /> */}
           <span className="text-lg font-semibold">Aadil&apos;s Portfolio</span>
         </Link>
         <nav className="flex flex-wrap items-center gap-x-4">

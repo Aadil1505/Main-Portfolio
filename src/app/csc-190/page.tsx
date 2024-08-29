@@ -1,6 +1,7 @@
 import Slider from "@/components/sections/Slider";
-import { Lock, Mail, UsersRound } from "lucide-react";
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
+import { Github, Leaf } from "lucide-react";
+import { Link } from "next-view-transitions";
 
 export default function Page() {
   const images = [
@@ -48,7 +49,7 @@ export default function Page() {
             <div className="space-y-6 lg:space-y-10">
               {/* Icon Block */}
               <div className="flex">
-                <Mail className="flex-shrink-0 mt-2 h-6 w-6" />
+                <Leaf className="flex-shrink-0 mt-2 h-6 w-6" />
                 <div className="ms-5 sm:ms-8">
                   <h3 className="text-base sm:text-lg font-semibold">
                     Ripe Shopping
@@ -57,6 +58,14 @@ export default function Page() {
                   A Modern, Useful Grocery Shopping Web App that uses image recognition to make 
                   traditional grocery shopping ten times quicker.
                   </p>
+                  <div className="mt-4">
+                    <Link className="flex items-center hover:text-secondary" href="https://github.com/Aadil1505/Ripe-Shopping">                          
+                      <Github className="flex-shrink-0 h-5 w-5" />
+                        <h3 className="ms-3 text-sm font-semibold">
+                          Ripe
+                        </h3>
+                    </Link>
+                  </div>
                   <div className="mt-4 flex gap-x-4">
                     <Badge variant="outline">Nextjs</Badge>
                     <Badge variant="outline">MongoDB</Badge>
