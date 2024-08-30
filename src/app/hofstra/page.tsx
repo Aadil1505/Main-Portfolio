@@ -91,7 +91,7 @@ export default function Page() {
                     Multifactor Authentication for SSH
                   </h3>
                   <p className="mt-1 text-muted-foreground">
-                    Asisted in the implementation of the open source solution privacyidea into the department's
+                    Asisted in the implementation of the open source solution privacyidea into the department&apos;s
                     ecosystem. Created specific policies that allowed for increased protection against the rising
                     amount of SSH attacks and enforced a strict multifactor authentication login system to lab-wide 
                     linux machines.
