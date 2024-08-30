@@ -52,7 +52,7 @@ export default function Page() {
             <div className="space-y-6 lg:space-y-10">
               {/* Icon Block */}
               <div className="flex">
-                <ShoppingBag className="flex-shrink-0 mt-2 h-6 w-6" />
+                <ShoppingBag className="flex-shrink-0 mt-2 h-6 w-6 animate-bounce" />
                 <div className="ms-5 sm:ms-8">
                   <h3 className="text-base sm:text-lg font-semibold">
                     Clothing Brand

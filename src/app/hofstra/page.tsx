@@ -48,6 +48,10 @@ export default function Page() {
             <div className="space-y-6 lg:space-y-10">
               {/* Icon Block */}
               <div className="flex">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                </span>
                 <Mail className="flex-shrink-0 mt-2 h-6 w-6" />
                 <div className="ms-5 sm:ms-8">
                   <h3 className="text-base sm:text-lg font-semibold">
@@ -87,8 +91,10 @@ export default function Page() {
                     Multifactor Authentication for SSH
                   </h3>
                   <p className="mt-1 text-muted-foreground">
-                    Our passion is bringing people together. Beyond creating
-                    beautiful spaces, we provide shared experiences.
+                    Asisted in the implementation of the open source solution privacyidea into the department's
+                    ecosystem. Created specific policies that allowed for increased protection against the rising
+                    amount of SSH attacks and enforced a strict multifactor authentication login system to lab-wide 
+                    linux machines.
                   </p>
                   <div className="mt-4 flex gap-x-4">
                     <Badge variant="outline">Rocky Linux</Badge>
@@ -106,10 +112,9 @@ export default function Page() {
                     GPU Cluster Account Management System
                   </h3>
                   <p className="mt-1 text-muted-foreground">
-                    We worry about the details so that our residents don&apos;t
-                    have to. From our online application process to simple,
-                    all-inclusive billing we aim to make the living experience
-                    as effortless as possible.
+                    Implemented functionality that allowed for an easier account creation process for the end user 
+                    by integrating email authentication and notifications through the newly created production email
+                    server.
                   </p>
                   <div className="mt-4 flex gap-x-4">
                     <Badge variant="outline">Nodejs</Badge>

@@ -39,17 +39,20 @@ export default function Page() {
             <div>
               <h2 className="text-3xl font-bold lg:text-4xl">Software Engineering</h2>
               <p className="mt-3 text-muted-foreground">
-                As a Computer Science Technician, I have worked and even lead tons of projects 
-                that were required or needed by Hofstra&apos;s Computer Science Department. However, 
-                below are some of the most complex projects that are/will soon be in production 
-                that took months of work including learning to navigate linux and the terminal, 
-                reading open source software documentation, and intricate web development tasks.
+                As a Computer Science Student, my introduction to the work patterns and ideaology used in the 
+                field came with my first software engineering class, CSC-190. In this class I learned everything
+                including software lifecycles, version control and management, architecture patterns and structures, 
+                and especially what it is like to work in a team on a project. I got my first real experience on a
+                group development project where we needed to submit requirement documents, project plans, gantt charts,
+                status updates and much more besides just the final presentations/demo and completed project. Not only was I 
+                able to learn the sufficient skills necessary to complete the project and its requirements, but I also
+                learned how to collaborate efficiently as a member of a team and project lead.
               </p>
             </div>
             <div className="space-y-6 lg:space-y-10">
               {/* Icon Block */}
               <div className="flex">
-                <Leaf className="flex-shrink-0 mt-2 h-6 w-6" />
+                <Leaf className="flex-shrink-0 mt-2 h-6 w-6 animate-pulse" />
                 <div className="ms-5 sm:ms-8">
                   <h3 className="text-base sm:text-lg font-semibold">
                     Ripe Shopping
