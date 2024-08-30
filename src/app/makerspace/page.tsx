@@ -54,7 +54,7 @@ export default function Page() {
                     Makerspace Management Portal
                   </h3>
                   <p className="mt-1 text-muted-foreground">
-                    The Makerspace Management Portal is being built for Hofstra University's Science and Innovation Center. 
+                    The Makerspace Management Portal is being built for Hofstra University&apos;s Science and Innovation Center. 
                     This web application will serve as an employee and student management system allowing directors and employees
                     to track and manage training statuses of students, manage student information, and will later handle machine 
                     status monitoring.
