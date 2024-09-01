@@ -1,13 +1,12 @@
+import { OrbitingCirclesDemo } from "@/components/global/Orbit";
 import BoxReveal from "@/components/magicui/box-reveal";
+import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import TextReveal from "@/components/magicui/text-reveal";
-import GradualSpacing from "@/components/magicui/gradual-spacing";
-import BlurIn from "@/components/magicui/blur-in";
 import WordRotate from "@/components/magicui/word-rotate";
 import Cards from "@/components/sections/Cards";
-import { OrbitingCirclesDemo } from "@/components/global/Orbit";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { ArrowDownToLine } from 'lucide-react';
+import Link from "next/link";
 
 
 
@@ -102,7 +101,11 @@ export default function Home() {
 
       {/* RESUME SECTION */}
       <div id="Resume" className="h-screen flex items-center justify-center text-center">
-        <div className="text-2xl font-bold md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl">Resume</div>
+        <VelocityScroll
+          text="Resume"
+          default_velocity={5}
+          className="font-display text-center text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem] transform-gpu"
+        />
       </div>
       
       {/* RESUME */}
