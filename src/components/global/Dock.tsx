@@ -59,7 +59,7 @@ export default function DockDemo() {
       const currentScrollY = scrollY.get();
       if (currentScrollY < lastScrollY) {
         setVisible(true);
-      } else if (currentScrollY > 100 && currentScrollY > lastScrollY) {
+      } else if (currentScrollY > 10 && currentScrollY > lastScrollY) {
         setVisible(false);
       }
       setLastScrollY(currentScrollY);
