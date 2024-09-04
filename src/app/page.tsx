@@ -4,6 +4,7 @@ import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import TextReveal from "@/components/magicui/text-reveal";
 import WordRotate from "@/components/magicui/word-rotate";
 import Cards from "@/components/sections/Cards";
+import Resume from "@/components/sections/Resume";
 import { Button } from "@/components/ui/button";
 import { ArrowDownToLine } from 'lucide-react';
 import Link from "next/link";
@@ -109,7 +110,7 @@ export default function Home() {
       </div>
       
       {/* RESUME */}
-      <div className="flex flex-col items-center">
+      {/* <div className="flex flex-col items-center">
         <div className="container py-12 lg:py-16">
           <div className="max-w-lg mx-auto shadow-2xl">
             <img src="/Resume.jpg" alt="Resume" className="w-full h-auto" />
@@ -122,7 +123,10 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <Resume/>
+
     </>
   );
 }
