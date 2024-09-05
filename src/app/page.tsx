@@ -11,7 +11,7 @@ export default function Home() {
     <>
 
       {/* LANDING HERO */}
-      <div className="relative overflow-hidden py-24 lg:py-32 h-screen">
+      <div className="relative overflow-hidden py-24 lg:py-32 min-h-screen">
         <div className="relative z-10">
           <div className="container py-10 lg:py-16">
             <div className="max-w-2xl text-center mx-auto">
