@@ -40,7 +40,7 @@ export default function Resume() {
               <img className="flex-shrink-0 mt-1 h-5 w-5 text-primary" src='https://www.hofstra.edu/themes/contrib/hofstra/assets/img/logo-shield.png'/>                <div className="ml-4">
                   <h4 className="text-lg font-semibold mb-2">Computer Science Technician</h4>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li>&#8226; Refactored and enhanced the department's email server following a security breach, implementing advanced security measures.</li>
+                    <li>&#8226; Refactored and enhanced the department&apos;s email server following a security breach, implementing advanced security measures.</li>
                     <li>&#8226; Implemented multi-factor authentication for SSH access, preventing thousands of SSH attacks.</li>
                     <li>&#8226; Rebuilt and optimized computer hardware and software for department faculty and students.</li>
                     <li>&#8226; Assisted students with remote access and troubleshooting computer-related issues.</li>
