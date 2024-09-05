@@ -30,12 +30,12 @@ export default function Resume() {
               <div className="flex">
               <img className="flex-shrink-0 mt-1 h-5 w-5 text-primary" src='https://www.hofstra.edu/themes/contrib/hofstra/assets/img/logo-shield.png'/>                <div className="ml-4">
                   <h4 className="text-lg font-semibold mb-2">Computer Science Technician</h4>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>&#8226; Refactored and enhanced the department&apos;s email server following a security breach, implementing advanced security measures.</li>
-                    <li>&#8226; Implemented multi-factor authentication for SSH access, preventing thousands of SSH attacks.</li>
-                    <li>&#8226; Rebuilt and optimized computer hardware and software for department faculty and students.</li>
-                    <li>&#8226; Assisted students with remote access and troubleshooting computer-related issues.</li>
-                    <li>&#8226; Collaborated with peers to maintain a functional tech ecosystem in the department.</li>
+                  <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+                    <li>Refactored and enhanced the department&apos;s email server following a security breach, implementing advanced security measures.</li>
+                    <li>Implemented multi-factor authentication for SSH access, preventing thousands of SSH attacks.</li>
+                    <li>Rebuilt and optimized computer hardware and software for department faculty and students.</li>
+                    <li>Assisted students with remote access and troubleshooting computer-related issues.</li>
+                    <li>Collaborated with peers to maintain a functional tech ecosystem in the department.</li>
                   </ul>
                 </div>
               </div>
@@ -50,10 +50,10 @@ export default function Resume() {
                 <img className="flex-shrink-0 mt-1 h-5 w-5 text-primary" src='https://freelogopng.com/images/all_img/1687887898amazon-fresh-icon.png'/>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold mb-2">Flex Associate/Customer Service</h4>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>&#8226; Provided excellent customer service and efficiently solved customer problems.</li>
-                    <li>&#8226; Managed customer returns and transactions at the point of sale.</li>
-                    <li>&#8226; Packed groceries and delivered online orders while monitoring inventory.</li>
+                  <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+                    <li>Provided excellent customer service and efficiently solved customer problems.</li>
+                    <li>Managed customer returns and transactions at the point of sale.</li>
+                    <li>Packed groceries and delivered online orders while monitoring inventory.</li>
                   </ul>
                 </div>
               </div>
@@ -68,10 +68,10 @@ export default function Resume() {
                 <img className="flex-shrink-0 mt-1 h-5 w-5 text-primary" src='https://i.imgur.com/zGJLfY1.png'/>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold mb-2">Part-Time Sales Associate</h4>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>&#8226; Exceeded weekly sales targets by providing expert product knowledge.</li>
-                    <li>&#8226; Fulfilled online orders and managed customer transactions.</li>
-                    <li>&#8226; Consistently surpassed company expectations, achieving over $20,000 in weekly sales.</li>
+                  <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+                    <li>Exceeded weekly sales targets by providing expert product knowledge.</li>
+                    <li>Fulfilled online orders and managed customer transactions.</li>
+                    <li>Consistently surpassed company expectations, achieving over $20,000 in weekly sales.</li>
                   </ul>
                 </div>
               </div>
@@ -102,9 +102,9 @@ export default function Resume() {
           <section>
             <h2 className="text-2xl font-bold lg:text-3xl mb-6">Projects</h2>
             <ul className="space-y-2 text-muted-foreground">
-              <li>&#8226; Developed a student resource management web application using React and Node.js.</li>
-              <li>&#8226; Created a machine learning model for predicting student performance based on historical data.</li>
-              <li>&#8226; Contributed to an open-source project aimed at improving Linux system security.</li>
+              <li>Developed a student resource management web application using React and Node.js.</li>
+              <li>Created a machine learning model for predicting student performance based on historical data.</li>
+              <li>Contributed to an open-source project aimed at improving Linux system security.</li>
             </ul>
           </section>
         </div>
