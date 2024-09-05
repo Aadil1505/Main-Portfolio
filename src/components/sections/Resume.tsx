@@ -14,15 +14,6 @@ export default function Resume() {
           <p className="text-xl text-muted-foreground mb-6">
             Motivated computer science student with a strong background in technology and problem-solving.
           </p>
-          <div className="flex justify-center space-x-4 text-muted-foreground">
-            <span className="flex items-center"><Mail className="mr-2" /> aadil15alli@gmail.com</span>
-            <span className="flex items-center"><Phone className="mr-2" /> (646) 338-4179</span>
-            <span className="flex items-center"><MapPin className="mr-2" /> New York, NY</span>
-          </div>
-          <div className="mt-4 flex justify-center space-x-4">
-            <a href="https://github.com" className="text-muted-foreground hover:text-primary"><Github /></a>
-            <a href="https://linkedin.com/in/aadil-alli" className="text-muted-foreground hover:text-primary"><Linkedin /></a>
-          </div>
         </header>
 
         {/* Grid */}
