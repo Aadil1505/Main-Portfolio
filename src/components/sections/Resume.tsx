@@ -1,7 +1,6 @@
-import React from 'react';
-import { ArrowDownToLine, Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
-import { Badge } from '../ui/badge';
-import { Button } from '../ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { ArrowDownToLine } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Resume() {
