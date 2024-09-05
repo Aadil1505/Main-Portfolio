@@ -101,7 +101,7 @@ export default function Resume() {
           {/* Projects or Achievements */}
           <section>
             <h2 className="text-2xl font-bold lg:text-3xl mb-6">Projects</h2>
-            <ul className="space-y-2 text-muted-foreground">
+            <ul className="space-y-2 text-muted-foreground list-disc list-inside">
               <li>Developed a student resource management web application using React and Node.js.</li>
               <li>Created a machine learning model for predicting student performance based on historical data.</li>
               <li>Contributed to an open-source project aimed at improving Linux system security.</li>

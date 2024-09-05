@@ -1,6 +1,6 @@
 import Slider from "@/components/sections/Slider";
-import { Cog, Lock, Mail, UsersRound } from "lucide-react";
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
+import { Cog } from "lucide-react";
 
 export default function Page() {
   const images = [
@@ -16,7 +16,7 @@ export default function Page() {
         <div className="container">
           <div className="max-w-2xl text-center mx-auto">
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-              Computer Science Technician
+              Makerspace developer
             </h1>
             <p className="mt-3 text-xl text-muted-foreground">
               Nano-computing breaks barriers, unlocking new tech horizons.

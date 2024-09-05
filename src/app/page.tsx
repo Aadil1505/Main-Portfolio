@@ -5,11 +5,6 @@ import TextReveal from "@/components/magicui/text-reveal";
 import WordRotate from "@/components/magicui/word-rotate";
 import Cards from "@/components/sections/Cards";
 import Resume from "@/components/sections/Resume";
-import { Button } from "@/components/ui/button";
-import { ArrowDownToLine } from 'lucide-react';
-import Link from "next/link";
-
-
 
 export default function Home() {
   return (

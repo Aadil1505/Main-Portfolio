@@ -1,6 +1,6 @@
 import Slider from "@/components/sections/Slider";
-import { Lock, Mail, ShoppingBag, UsersRound } from "lucide-react";
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
+import { ShoppingBag } from "lucide-react";
 
 export default function Page() {
   const images = [
