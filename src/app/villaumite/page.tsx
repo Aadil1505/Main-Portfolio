@@ -1,6 +1,7 @@
 import Slider from "@/components/sections/Slider";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingBag } from "lucide-react";
+import Link from "next/link";
 
 export default function Page() {
   const images = [
@@ -58,12 +59,17 @@ export default function Page() {
                     Clothing Brand
                   </h3>
                   <p className="mt-1 text-muted-foreground">
-                  Something Something Something Something Something Something 
-                  Something Something Something Something Something Something
-                  Something Something Something Something Something Something 
-                  Something Something Something Something Something Something 
-                  Something Something Something Something Something Something 
+                  Founding, designing, and building out a complete brand with finished products
+                  and custom designs hosted on Shopify
                   </p>
+                  <div className="mt-4">
+                    <Link className="flex items-center hover:text-secondary" href="https://villaumite.com/">                          
+                      <img className="flex-shrink-0 h-5 w-5" src="https://i.imgur.com/2EHshoi.png"/>
+                        <h3 className="ms-3 text-sm font-semibold">
+                          Villaumite
+                        </h3>
+                    </Link>
+                  </div>
                   <div className="mt-4 flex gap-x-4">
                     <Badge variant="outline">HTML</Badge>
                     <Badge variant="outline">CSS</Badge>
