@@ -45,7 +45,7 @@ export default function RootLayout({
           <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/690b884d-209f-4b7c-ac46-e66fc5a9f2e5.png?token=YbadBs_Ji6btCRS3NA9aQnn1RmKjpR6EGcX17RsyqpA&height=675&width=1200&expires=33260796001"/>
         </head>
         <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
               <DockDemo />
               <main className="min-h-screen">
                 <PageParticles />
