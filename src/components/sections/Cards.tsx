@@ -56,7 +56,7 @@ export default function Cards() {
         <div className="relative mt-12">
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((item, idx) => (
-              <Link key={idx} href={item.path} className="hover:backdrop-blur hover:-translate-y-2 ease-in-out duration-300 hover:animate-pulse">              
+              <Link scroll={true} key={idx} href={item.path} className="hover:backdrop-blur hover:-translate-y-2 ease-in-out duration-300 hover:animate-pulse">              
                 <li className="bg-transparent transform-gpu space-y-3 p-4 border border-secondary dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] rounded-xl shadow-xl">
                   <div className="p-4 transform-gpu w-fit">
                     {item.icon}

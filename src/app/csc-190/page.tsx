@@ -1,6 +1,6 @@
 import Slider from "@/components/sections/Slider";
 import { Badge } from "@/components/ui/badge";
-import { Github, Leaf } from "lucide-react";
+import { Leaf } from "lucide-react";
 import { Link } from "next-view-transitions";
 
 export default function Page() {
@@ -62,8 +62,8 @@ export default function Page() {
                   traditional grocery shopping ten times quicker.
                   </p>
                   <div className="mt-4">
-                    <Link className="flex items-center hover:text-secondary" href="https://github.com/Aadil1505/Ripe-Shopping">                          
-                      <Github className="flex-shrink-0 h-5 w-5" />
+                    <Link className="flex items-center hover:text-secondary" href="https://ripe-shopping.vercel.app/">                          
+                      <Leaf className="flex-shrink-0 h-5 w-5" />
                         <h3 className="ms-3 text-sm font-semibold">
                           Ripe
                         </h3>
