@@ -22,20 +22,14 @@ export default function CarouselDemo({ images }: { images: ImageSlide[] }) {
         setCount(api.scrollSnapList().length);
         setCurrent(api.selectedScrollSnap() + 1);
 
-        const selectHandler = () => {
+        api.on("select", () => {
             setCurrent(api.selectedScrollSnap() + 1);
-        };
-
-        api.on("select", selectHandler);
-
-        return () => {
-            api.off("select", selectHandler);
-        };
+        });
     }, [api]);
 
     return (
         <div className="relative w-full">
-            <Carousel opts={{ align: "start", loop: true }} setApi={setApi}>
+            <Carousel setApi={setApi} opts={{ align: "start", loop: true }}>
                 <CarouselContent>
                     {images.map((image, index) => (
                         <CarouselItem key={index}>
@@ -62,7 +56,7 @@ export default function CarouselDemo({ images }: { images: ImageSlide[] }) {
                             key={index}
                             variant={index + 1 === current ? "outline" : "secondary"}
                             onClick={() => api?.scrollTo(index)}
-                            className="h-2 w-2 rounded-full p-0 transition-all duration-300 ease-in-out"
+                            className="h-2 w-2 rounded-full p-0 duration-300 ease-in-out"
                         />
                     ))}
                 </div>
