@@ -1,13 +1,13 @@
-import Slider from "@/components/sections/Slider";
+import Carousel from "@/components/sections/Carousel";
 import { Badge } from "@/components/ui/badge";
 import { Leaf } from "lucide-react";
 import { Link } from "next-view-transitions";
 
 export default function Page() {
   const images = [
-    { src: "https://aadil-alli.vercel.app/assets/mailServer-jYf_Ldcx.png", alt: "Description of image 1" },
-    { src: "https://placehold.co/1920x1080", alt: "Description of image 2" },
-    { src: "https://placehold.co/1920x1080", alt: "Description of image 3" },
+    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 1" },
+    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 2" },
+    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 3" },
   ]
   return (
     <>
@@ -23,8 +23,8 @@ export default function Page() {
               Introduction to software engineering, development, software lifecycles and more.
             </p>
           </div>
-          <div className="mt-10 relative max-w-3xl mx-auto">
-            <Slider images={images} autoplay={true} aspectRatio={16/9}/>
+          <div className="mt-10 max-w-3xl mx-auto">
+            <Carousel images={images}/>
           </div>
         </div>
       </div>

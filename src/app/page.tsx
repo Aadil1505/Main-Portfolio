@@ -103,23 +103,6 @@ export default function Home() {
           className="font-display text-center text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem] transform-gpu"
         />
       </div>
-      
-      {/* RESUME */}
-      {/* <div className="flex flex-col items-center">
-        <div className="container py-12 lg:py-16">
-          <div className="max-w-lg mx-auto shadow-2xl">
-            <img src="/Resume.jpg" alt="Resume" className="w-full h-auto" />
-          </div>
-          <div className="mt-6 text-center">
-            <Button asChild>
-              <Link href='/Aadil-Resume.pdf' download>
-                Download PDF <ArrowDownToLine className="w-4 ml-2"/>
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </div> */}
-
       <Resume/>
 
     </>

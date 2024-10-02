@@ -107,26 +107,6 @@ export default function DockDemo() {
                 </DockIcon>
               ))}
               <Separator orientation="vertical" className="h-full" />
-              {/* {Object.entries(DATA.contact.social).map(([name, social]) => (
-                <DockIcon key={name}>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Link
-                        href={social.url}
-                        className={cn(
-                          buttonVariants({ variant: "ghost", size: "icon" }),
-                          "size-12 rounded-full",
-                        )}
-                      >
-                        <social.icon className="size-4" />
-                      </Link>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>{name}</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </DockIcon>
-              ))} */}
                 <DockIcon>
                   <Dialog>
                     <DialogTrigger asChild>

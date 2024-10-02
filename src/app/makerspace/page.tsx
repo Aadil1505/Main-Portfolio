@@ -1,12 +1,12 @@
-import Slider from "@/components/sections/Slider";
+import Carousel from "@/components/sections/Carousel";
 import { Badge } from "@/components/ui/badge";
 import { Cog } from "lucide-react";
 
 export default function Page() {
   const images = [
-    { src: "https://aadil-alli.vercel.app/assets/mailServer-jYf_Ldcx.png", alt: "Description of image 1" },
-    { src: "https://placehold.co/1920x1080", alt: "Description of image 2" },
-    { src: "https://placehold.co/1920x1080", alt: "Description of image 3" },
+    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 1" },
+    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 2" },
+    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 3" },
   ]
   return (
     <>
@@ -23,7 +23,7 @@ export default function Page() {
             </p>
           </div>
           <div className="mt-10 relative max-w-3xl mx-auto">
-            <Slider images={images} autoplay={true} aspectRatio={16/9}/>
+            <Carousel images={images}/>
           </div>
         </div>
       </div>
