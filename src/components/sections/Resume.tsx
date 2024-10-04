@@ -20,21 +20,59 @@ export default function Resume() {
           {/* Work Experience */}
           <section>
             <h2 className="text-2xl font-bold lg:text-3xl mb-6">Work Experience</h2>
-            {/* Icon Block */}
+            {/* Hofstra University - Computer Science Technician */}
             <div className="mb-8">
               <div className="flex justify-between mb-2">
                 <h3 className="text-xl font-semibold">Hofstra University</h3>
                 <span className="text-base sm:text-lg text-muted-foreground">October 2022 - Present</span>
               </div>
               <div className="flex">
-              <img className="flex-shrink-0 mt-1 h-5 w-5 text-primary" src='https://www.hofstra.edu/themes/contrib/hofstra/assets/img/logo-shield.png'/>                <div className="ml-4">
+              <img className="flex-shrink-0 mt-1 h-5 w-5 text-primary" src='https://www.hofstra.edu/themes/contrib/hofstra/assets/img/logo-shield.png'/>                
+              <div className="ml-4">
                   <h4 className="text-lg font-semibold mb-2">Computer Science Technician</h4>
                   <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-                    <li>Refactored and enhanced the department&apos;s email server following a security breach, implementing advanced security measures.</li>
-                    <li>Implemented multi-factor authentication for SSH access, preventing thousands of SSH attacks.</li>
-                    <li>Rebuilt and optimized computer hardware and software for department faculty and students.</li>
-                    <li>Assisted students with remote access and troubleshooting computer-related issues.</li>
-                    <li>Collaborated with peers to maintain a functional tech ecosystem in the department.</li>
+                    <li>Refactored and enhanced the department's email server following a security breach, upgraded its capabilities and configured advanced software security measures.</li>
+                    <li>Implemented multi factor authentication for SSH access to Linux machines preventing thousands of SSH attacks.</li>
+                    <li>Creating and testing IBM Storage Scale and HPE PFSS file system environments for NVIDIA GPU cluster file storage.</li>
+                    <li>Added secure email authentication to the GPU cluster account provisioning software.</li>
+                    <li>Collaborate with peers and coworkers on projects while tracking issues and documenting in Jira and Confluence.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            {/* Hofstra University - Maker Space Software Developer */}
+            <div className="mb-8">
+              <div className="flex justify-between mb-2">
+                <h3 className="text-xl font-semibold">Hofstra University</h3>
+                <span className="text-base sm:text-lg text-muted-foreground">June 2024 - Present</span>
+              </div>
+              <div className="flex">
+              <img className="flex-shrink-0 mt-1 h-5 w-5 text-primary" src='https://www.hofstra.edu/themes/contrib/hofstra/assets/img/logo-shield.png'/>                
+              <div className="ml-4">
+                  <h4 className="text-lg font-semibold mb-2">Maker Space Software Developer</h4>
+                  <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+                    <li>Developed a comprehensive student and employee management system using Next.js, NextAuth, and PostgreSQL, significantly reducing time needed for managing and accessing student trainings and certifications.</li>
+                    <li>Creating an API to track student usage data of machines and equipment in the makerspace, providing valuable insights for departmental higher-ups.</li>
+                    <li>Automated previously manual tracking processes, enhancing efficiency for the director and employees.</li>
+                    <li>Lead and manage a development team to assist in issues and project growth.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            {/* Champs Sports */}
+            <div className="mb-8">
+              <div className="flex justify-between mb-2">
+                <h3 className="text-xl font-semibold">Champs Sports</h3>
+                <span className="text-base sm:text-lg text-muted-foreground">October 2020 - Present</span>
+              </div>
+              <div className="flex">
+                <img className="flex-shrink-0 mt-1 h-5 w-5 text-primary" src='https://i.imgur.com/zGJLfY1.png'/>
+                <div className="ml-4">
+                  <h4 className="text-lg font-semibold mb-2">Part-Time Sales Associate</h4>
+                  <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+                    <li>Provide excellent sales service and share expertise of products and trends to exceed the customer's needs.</li>
+                    <li>Fulfill sales by locating products and preparing for shipment or physical transactions on mobile point of sale.</li>
+                    <li>Exceed company expectation of at least $20,000 a week in sales.</li>
                   </ul>
                 </div>
               </div>
@@ -53,24 +91,6 @@ export default function Resume() {
                     <li>Provided excellent customer service and efficiently solved customer problems.</li>
                     <li>Managed customer returns and transactions at the point of sale.</li>
                     <li>Packed groceries and delivered online orders while monitoring inventory.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            {/* Champs Sports */}
-            <div className="mb-8">
-              <div className="flex justify-between mb-2">
-                <h3 className="text-xl font-semibold">Champs Sports</h3>
-                <span className="text-base sm:text-lg text-muted-foreground">October 2020 - Present</span>
-              </div>
-              <div className="flex">
-                <img className="flex-shrink-0 mt-1 h-5 w-5 text-primary" src='https://i.imgur.com/zGJLfY1.png'/>
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold mb-2">Part-Time Sales Associate</h4>
-                  <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-                    <li>Exceeded weekly sales targets by providing expert product knowledge.</li>
-                    <li>Fulfilled online orders and managed customer transactions.</li>
-                    <li>Consistently surpassed company expectations, achieving over $20,000 in weekly sales.</li>
                   </ul>
                 </div>
               </div>
