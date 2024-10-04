@@ -31,7 +31,7 @@ export default function Resume() {
               <div className="ml-4">
                   <h4 className="text-lg font-semibold mb-2">Computer Science Technician</h4>
                   <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-                    <li>Refactored and enhanced the department's email server following a security breach, upgraded its capabilities and configured advanced software security measures.</li>
+                    <li>Refactored and enhanced the department&apos;s email server following a security breach, upgraded its capabilities and configured advanced software security measures.</li>
                     <li>Implemented multi factor authentication for SSH access to Linux machines preventing thousands of SSH attacks.</li>
                     <li>Creating and testing IBM Storage Scale and HPE PFSS file system environments for NVIDIA GPU cluster file storage.</li>
                     <li>Added secure email authentication to the GPU cluster account provisioning software.</li>
@@ -70,7 +70,7 @@ export default function Resume() {
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold mb-2">Part-Time Sales Associate</h4>
                   <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-                    <li>Provide excellent sales service and share expertise of products and trends to exceed the customer's needs.</li>
+                    <li>Provide excellent sales service and share expertise of products and trends to exceed the customer&apos;s needs.</li>
                     <li>Fulfill sales by locating products and preparing for shipment or physical transactions on mobile point of sale.</li>
                     <li>Exceed company expectation of at least $20,000 a week in sales.</li>
                   </ul>
