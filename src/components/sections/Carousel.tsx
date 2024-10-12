@@ -46,8 +46,8 @@ export default function CarouselDemo({ images }: { images: ImageSlide[] }) {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious variant="ghost" className="absolute left-1 top-1/2 -translate-y-1/2" />
-                <CarouselNext variant="ghost" className="absolute right-2 top-1/2 -translate-y-1/2" />
+                <CarouselPrevious variant="ghost" className="absolute left-1 top-1/2 -translate-y-1/2 text-accent" />
+                <CarouselNext variant="ghost" className="absolute right-2 top-1/2 -translate-y-1/2 text-accent" />
             </Carousel>
             {count > 1 && (
                 <div className="mt-2 flex justify-center space-x-2">
