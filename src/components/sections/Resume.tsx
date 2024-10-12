@@ -4,6 +4,9 @@ import { ArrowDownToLine } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Resume() {
+
+  const skillsList = ['Javascript', 'Typescript', 'Python', 'Linux Administration', 'Network Security', 'Hardware Troubleshooting']
+
   return (
     <div className="container py-24 lg:py-32">
       <div className="max-w-3xl mx-auto">
@@ -101,7 +104,7 @@ export default function Resume() {
           <section>
             <h2 className="text-2xl font-bold lg:text-3xl mb-6">Skills</h2>
             <div className="flex flex-wrap gap-2">
-              {['Javascript', 'Typescript', 'Python', 'Linux Administration', 'Network Security', 'Hardware Troubleshooting'].map((skill) => (
+              {skillsList.map((skill) => (
                 <Badge key={skill} variant="outline"> {skill} </Badge>
               ))}
             </div>
@@ -118,14 +121,14 @@ export default function Resume() {
           </section>
 
           {/* Projects or Achievements */}
-          <section>
+          {/* <section>
             <h2 className="text-2xl font-bold lg:text-3xl mb-6">Projects</h2>
             <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-              <li>Developed a student resource management web application using React and Node.js.</li>
+              <li>Developed an employee and student management web application using Nextjs.</li>
               <li>Created a machine learning model for predicting student performance based on historical data.</li>
               <li>Contributed to an open-source project aimed at improving Linux system security.</li>
             </ul>
-          </section>
+          </section> */}
         </div>
         {/* End Grid */}
         <div className="mt-10 text-center">
