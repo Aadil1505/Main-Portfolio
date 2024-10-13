@@ -12,21 +12,21 @@ export default function Page() {
     <>
 
       {/* Hero */}
-      <div className="relative overflow-hidden py-24 lg:py-32">
-        <div className="container">
-          <div className="max-w-2xl text-center mx-auto">
-            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-              Makerspace developer
-            </h1>
-            <p className="mt-3 text-xl text-muted-foreground">
-              Nano-computing breaks barriers, unlocking new tech horizons.
-            </p>
-          </div>
-          <div className="mt-10 relative max-w-3xl mx-auto">
-            <Carousel images={images}/>
-          </div>
+      <div className="flex items-center justify-center min-h-screen">
+      <div className="container mx-auto px-4">
+        <div className="max-w-2xl text-center mx-auto">
+          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+            Makerspace Developer
+          </h1>
+          <p className="mt-3 text-xl text-muted-foreground">
+            Creating systems for the makerspace.
+          </p>
+        </div>
+        <div className="mt-10 relative max-w-3xl mx-auto">
+          <Carousel images={images} />
         </div>
       </div>
+    </div>
       {/* End Hero */}
 
 
@@ -36,7 +36,7 @@ export default function Page() {
           {/* Grid */}
           <div className="grid gap-12">
             <div>
-              <h2 className="text-3xl font-bold lg:text-4xl">Makerspace developer</h2>
+              <h2 className="text-3xl font-bold lg:text-4xl">Makerspace Developer</h2>
               <p className="mt-3 text-muted-foreground">
                 As a developer for the makerspace, I am resposible for the creation and continued development
                 of different web tools that will be used throughout the lifetime of the space. The first project
