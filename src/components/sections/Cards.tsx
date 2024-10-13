@@ -27,7 +27,7 @@ export default function Cards() {
     {
       icon: (
         <img
-          src="/ripe-new.png"
+          src="/ripe/logo.png"
           alt="Ripe"
           className="w-20 h-20 object-contain"
         />

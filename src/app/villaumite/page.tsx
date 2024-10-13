@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function Page() {
   const images = [
-    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 1" },
-    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 2" },
-    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 3" },
+    { src: "villaumite/villaumite-1.png", alt: "Villaumite 1" },
+    { src: "villaumite/villaumite-2.png", alt: "Villaumite 2" },
+    { src: "villaumite/villaumite-3.png", alt: "Villaumite 3" },
   ]
   return (
     <>

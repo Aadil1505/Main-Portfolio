@@ -5,10 +5,10 @@ import { Link } from "next-view-transitions";
 
 export default function Page() {
   const images = [
-    { src: "/ripe/ripe-1.png", alt: "Description of image 1" },
-    { src: "/ripe/ripe-2.png", alt: "Description of image 2" },
-    { src: "/ripe/ripe-3.png", alt: "Description of image 3" },
-    { src: "/ripe/ripe-4.png", alt: "Description of image 4" },
+    { src: "/ripe/ripe-1.png", alt: "Ripe image 1" },
+    { src: "/ripe/ripe-2.png", alt: "Ripe image 2" },
+    { src: "/ripe/ripe-3.png", alt: "Ripe image 3" },
+    { src: "/ripe/ripe-4.png", alt: "Ripe image 4" },
   ]
   return (
     <>
