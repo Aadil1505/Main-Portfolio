@@ -4,9 +4,9 @@ import { Lock, Mail, UsersRound } from "lucide-react";
 
 export default function Page() {
   const images = [
-    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 1" },
-    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 2" },
-    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 3" },
+    { src: "hofstra/cs-technician-1.png", alt: "CS Technician 1" },
+    { src: "hofstra/cs-technician-2.png", alt: "CS Technician 2" },
+    { src: "hofstra/cs-technician-3.png", alt: "CS Technician 3" },
   ]
   return (
     <>
@@ -19,7 +19,7 @@ export default function Page() {
               Computer Science Technician
             </h1>
             <p className="mt-3 text-xl text-muted-foreground">
-              Nano-computing breaks barriers, unlocking new tech horizons.
+              Upgrading and developing systems and applications to increase security and performance.
             </p>
           </div>
           <div className="mt-10 relative max-w-3xl mx-auto">

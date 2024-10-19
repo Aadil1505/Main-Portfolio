@@ -4,9 +4,9 @@ import { Cog } from "lucide-react";
 
 export default function Page() {
   const images = [
-    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 1" },
-    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 2" },
-    { src: "https://placehold.co/1920x1080.png", alt: "Description of image 3" },
+    { src: "makerspace/makerspace-1.png", alt: "Makerspace 1" },
+    { src: "makerspace/makerspace-2.png", alt: "Makerspace 2" },
+    { src: "makerspace/makerspace-3.png", alt: "Makerspace 3" },
   ]
   return (
     <>
