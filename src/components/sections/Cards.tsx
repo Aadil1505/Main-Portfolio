@@ -51,20 +51,20 @@ export default function Cards() {
   ];
 
   return (
-    <section className="py-14 relative">
+    <section className="py-8 sm:py-14 relative">
       <div className="max-w-screen-7xl mx-auto">
-        <div className="relative mt-12">
-          <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="relative mt-6 sm:mt-12">
+          <ul className="grid gap-4 sm:gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((item, idx) => (
-              <Link scroll={true} key={idx} href={item.path} className="hover:backdrop-blur hover:-translate-y-2 ease-in-out duration-300 hover:animate-pulse">              
-                <li className="bg-transparent transform-gpu space-y-3 p-4 border border-secondary dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] rounded-xl shadow-xl">
-                  <div className="p-4 transform-gpu w-fit">
+              <Link scroll={true} key={idx} href={item.path} className="hover:backdrop-blur hover:-translate-y-2 ease-in-out duration-300 hover:animate-pulse">
+                <li className="bg-transparent transform-gpu space-y-2 sm:space-y-3 p-3 sm:p-4 border border-secondary dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] rounded-xl shadow-xl">
+                  <div className="p-2 sm:p-4 transform-gpu w-fit">
                     {item.icon}
                   </div>
-                  <h4 className="text-lg text-secondary-foreground font-bold tracking-tighter">
+                  <h4 className="text-base sm:text-lg text-secondary-foreground font-bold tracking-tighter">
                     {item.title}
                   </h4>
-                  <p className="text-gray-500">{item.desc}</p>
+                  <p className="text-sm sm:text-base text-gray-500">{item.desc}</p>
                 </li>
               </Link>
             ))}
