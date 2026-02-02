@@ -1,10 +1,20 @@
+"use client"
+
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { AArrowUp, Github, Linkedin, Mail, Smartphone } from 'lucide-react';
+import { Check, Copy, Github, Linkedin, Mail, Smartphone } from 'lucide-react';
 import Link from 'next/link';
+import { useCallback, useState } from "react";
 import { Button } from "../ui/button";
 import { ModeToggle } from "./ModeToggle";
 
 export default function Footer() {
+  const [copiedField, setCopiedField] = useState<string | null>(null);
+
+  const copyToClipboard = useCallback((text: string, field: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedField(field);
+    setTimeout(() => setCopiedField(null), 2000);
+  }, []);
   return (
     <footer className="p-4 sm:p-6 md:py-12 w-full shadow border-t backdrop-blur">
       <div className="container max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
@@ -28,33 +38,69 @@ export default function Footer() {
               <DialogHeader>
                 <DialogTitle>Contact Info</DialogTitle>
                 <DialogDescription>
-                  <div className="flex items-center mt-4">
-                    <Smartphone className="flex-shrink-0 h-4 w-4 sm:h-5 sm:w-5" />
-                    <h3 className="ms-2 sm:ms-3 text-xs sm:text-sm font-semibold">
-                      646-338-4179
-                    </h3>
+                  <div className="flex items-center justify-between mt-4">
+                    <div className="flex items-center">
+                      <Smartphone className="flex-shrink-0 h-4 w-4 sm:h-5 sm:w-5" />
+                      <h3 className="ms-2 sm:ms-3 text-xs sm:text-sm font-semibold">
+                        646-338-4179
+                      </h3>
+                    </div>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-8 w-8"
+                      onClick={() => copyToClipboard("646-338-4179", "phone")}
+                    >
+                      {copiedField === "phone" ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                    </Button>
                   </div>
-                  <div className="flex items-center mt-4">
-                    <Mail className="flex-shrink-0 h-4 w-4 sm:h-5 sm:w-5" />
-                    <h3 className="ms-2 sm:ms-3 text-xs sm:text-sm font-semibold">
-                      aadil15alli@gmail.com
-                    </h3>
+                  <div className="flex items-center justify-between mt-4">
+                    <div className="flex items-center">
+                      <Mail className="flex-shrink-0 h-4 w-4 sm:h-5 sm:w-5" />
+                      <h3 className="ms-2 sm:ms-3 text-xs sm:text-sm font-semibold">
+                        aadil15alli@gmail.com
+                      </h3>
+                    </div>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-8 w-8"
+                      onClick={() => copyToClipboard("aadil15alli@gmail.com", "email")}
+                    >
+                      {copiedField === "email" ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                    </Button>
                   </div>
-                  <div className="mt-4">
+                  <div className="flex items-center justify-between mt-4">
                     <Link className="flex items-center hover:text-secondary-foreground" href="https://github.com/Aadil1505">
                       <Github className="flex-shrink-0 h-4 w-4 sm:h-5 sm:w-5" />
                       <h3 className="ms-2 sm:ms-3 text-xs sm:text-sm font-semibold">
                         Aadil1505
                       </h3>
                     </Link>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-8 w-8"
+                      onClick={() => copyToClipboard("https://github.com/Aadil1505", "github")}
+                    >
+                      {copiedField === "github" ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                    </Button>
                   </div>
-                  <div className="mt-4">
+                  <div className="flex items-center justify-between mt-4">
                     <Link className="flex items-center hover:text-secondary-foreground" href="https://www.linkedin.com/in/aadil-alli/">
                       <Linkedin className="flex-shrink-0 h-4 w-4 sm:h-5 sm:w-5" />
                       <h3 className="ms-2 sm:ms-3 text-xs sm:text-sm font-semibold">
                         Aadil Alli
                       </h3>
                     </Link>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-8 w-8"
+                      onClick={() => copyToClipboard("https://www.linkedin.com/in/aadil-alli/", "linkedin")}
+                    >
+                      {copiedField === "linkedin" ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                    </Button>
                   </div>
                 </DialogDescription>
               </DialogHeader>
