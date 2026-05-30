@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { format, parseISO } from "date-fns";
 
 import {
@@ -31,6 +32,15 @@ export function ContributionCalendar({
   total: number;
 }) {
   const [tip, setTip] = useState<Tip | null>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  // When the chart overflows on narrow screens, start scrolled to the right
+  // (the most recent dates) so older history is reached by scrolling left.
+  useEffect(() => {
+    const scroller =
+      rootRef.current?.querySelector<HTMLElement>(".overflow-x-auto");
+    if (scroller) scroller.scrollLeft = scroller.scrollWidth;
+  }, []);
 
   function show(activity: Activity, el: SVGRectElement) {
     const rect = el.getBoundingClientRect();
@@ -42,7 +52,7 @@ export function ContributionCalendar({
   }
 
   return (
-    <div className="relative">
+    <div className="relative" ref={rootRef}>
       <ContributionGraph
         data={data}
         totalCount={total}
@@ -67,15 +77,20 @@ export function ContributionCalendar({
         </ContributionGraphFooter>
       </ContributionGraph>
 
-      {tip ? (
-        <div
-          role="tooltip"
-          style={{ left: tip.x, top: tip.y }}
-          className="pointer-events-none fixed z-50 -translate-x-1/2 -translate-y-[calc(100%+8px)] rounded-md border border-border bg-popover px-2 py-1 font-mono text-xs whitespace-nowrap text-popover-foreground shadow-md"
-        >
-          {tip.text}
-        </div>
-      ) : null}
+      {/* Portaled to <body> so the blur-fade wrapper's transform/filter
+          containing block can't displace this fixed-positioned tooltip. */}
+      {tip && typeof document !== "undefined"
+        ? createPortal(
+            <div
+              role="tooltip"
+              style={{ left: tip.x, top: tip.y }}
+              className="pointer-events-none fixed z-50 -translate-x-1/2 -translate-y-[calc(100%+8px)] rounded-md border border-border bg-popover px-2 py-1 font-mono text-xs whitespace-nowrap text-popover-foreground shadow-md"
+            >
+              {tip.text}
+            </div>,
+            document.body,
+          )
+        : null}
     </div>
   );
 }

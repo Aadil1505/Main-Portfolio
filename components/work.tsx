@@ -106,7 +106,7 @@ export function Work() {
                       alt=""
                       width={40}
                       height={40}
-                      className="size-7 shrink-0 rounded-md object-contain"
+                      className="size-7 shrink-0 object-contain"
                     />
                     <span
                       className={cn(

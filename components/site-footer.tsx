@@ -6,6 +6,7 @@ import {
   TickerSymbol,
 } from "@/components/kibo-ui/ticker";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
+import { BrandMark } from "@/components/brand-mark";
 import { site } from "@/lib/site";
 
 const navLinks = [
@@ -26,6 +27,7 @@ export function SiteFooter() {
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-7 px-6 py-14 text-center sm:py-16">
         <Ticker className="cursor-default gap-2 font-mono text-base">
+          <BrandMark className="size-5" />
           <TickerSymbol symbol="AADIL" className="font-pixel text-foreground" />
           <TickerPrice price={price} />
           <TickerPriceChange change={change} isPercent />

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
+import { BrandMark } from "@/components/brand-mark";
 import { site } from "@/lib/site";
 
 export function SiteHeader() {
@@ -11,8 +12,9 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link
           href="/"
-          className="font-pixel text-base tracking-tight transition-colors hover:text-primary"
+          className="flex items-center gap-4 font-pixel text-base tracking-tight transition-colors hover:text-primary"
         >
+          <BrandMark className="size-6" />
           {site.name}
         </Link>
 
