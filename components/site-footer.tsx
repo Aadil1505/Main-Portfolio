@@ -1,7 +1,10 @@
-import Link from "next/link";
-import { ArrowUp } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
+import {
+  Ticker,
+  TickerPrice,
+  TickerPriceChange,
+  TickerSymbol,
+} from "@/components/kibo-ui/ticker";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { site } from "@/lib/site";
 
@@ -12,73 +15,59 @@ const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
+// A playful "$AADIL, up and to the right" chip. Random arbitrary price; the
+// green up-arrow is a deliberate exception to the one-azure rule (same lane the
+// user approved for the contribution graph).
+const price = Math.round((Math.random() * 400 + 120) * 100) / 100;
+const change = Math.round((Math.random() * 7 + 1.2) * 100) / 100;
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto max-w-6xl px-6 py-12 sm:py-16">
-        <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <Link
-              href="/"
-              className="font-pixel text-base tracking-tight transition-colors hover:text-primary"
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-7 px-6 py-14 text-center sm:py-16">
+        <Ticker className="cursor-default gap-2 font-mono text-base">
+          <TickerSymbol symbol="AADIL" className="font-pixel text-foreground" />
+          <TickerPrice price={price} />
+          <TickerPriceChange change={change} isPercent />
+        </Ticker>
+
+        <nav
+          aria-label="Footer"
+          className="flex flex-wrap justify-center gap-x-6 gap-y-2 font-mono text-sm"
+        >
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-muted-foreground transition-colors hover:text-primary"
             >
-              {site.name}
-            </Link>
-            <p className="mt-2 font-mono text-xs text-muted-foreground">
-              full-stack &amp; infrastructure · {site.location.toLowerCase()}
-            </p>
-          </div>
+              {link.label}
+            </a>
+          ))}
+        </nav>
 
-          <nav
-            aria-label="Footer"
-            className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-sm"
-          >
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-muted-foreground transition-colors hover:text-primary"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
-          <nav aria-label="Social" className="-ml-2 flex items-center gap-0.5 sm:ml-0">
-            <Button asChild variant="ghost" size="icon">
-              <a
-                href={site.links.github}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub profile"
-              >
-                <GitHubIcon className="size-[1.05rem]" />
-              </a>
-            </Button>
-            <Button asChild variant="ghost" size="icon">
-              <a
-                href={site.links.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn profile"
-              >
-                <LinkedInIcon className="size-[1.05rem]" />
-              </a>
-            </Button>
-          </nav>
-        </div>
-
-        <div className="mt-10 flex flex-col gap-3 border-t border-border/60 pt-6 font-mono text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 {site.name}</p>
-          <p className="sm:order-last">next.js · tailwind · self-hosted</p>
-          <a
-            href="#top"
-            className="inline-flex items-center gap-1 underline-offset-4 transition-colors hover:text-primary hover:underline"
-          >
-            Back to top
-            <ArrowUp className="size-3.5" />
-          </a>
-        </div>
+        <nav aria-label="Social" className="flex items-center gap-1">
+          <Button asChild variant="ghost" size="icon">
+            <a
+              href={site.links.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub profile"
+            >
+              <GitHubIcon className="size-[1.05rem]" />
+            </a>
+          </Button>
+          <Button asChild variant="ghost" size="icon">
+            <a
+              href={site.links.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn profile"
+            >
+              <LinkedInIcon className="size-[1.05rem]" />
+            </a>
+          </Button>
+        </nav>
       </div>
     </footer>
   );

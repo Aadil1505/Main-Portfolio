@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { Download } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
 
 type Role = {
   org: string;
@@ -93,23 +96,33 @@ export function Experience() {
                 </div>
               </div>
 
-              <ul className="mt-5 space-y-2.5">
+              <ul className="mt-5 space-y-2.5 pl-16">
                 {role.bullets.map((bullet) => (
                   <li
                     key={bullet}
-                    className="flex gap-3 text-base leading-relaxed text-foreground"
+                    className="text-base leading-relaxed text-foreground"
                   >
-                    <span
-                      aria-hidden="true"
-                      className="mt-2.5 size-1.5 shrink-0 rounded-[1px] bg-primary"
-                    />
-                    <span>{bullet}</span>
+                    {bullet}
                   </li>
                 ))}
               </ul>
             </li>
           ))}
         </ol>
+
+        <div className="mt-12">
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="h-11 gap-2 px-5 font-pixel text-[0.95rem] tracking-tight"
+          >
+            <a href="/Aadil-Resume.pdf" download>
+              <Download className="size-4" />
+              Download résumé
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   );

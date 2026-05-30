@@ -23,7 +23,7 @@ const shaderBack = "#262624";
 export function Hero() {
   return (
     <HeroDitheringRoot
-      className="flex min-h-[calc(100svh-4rem)] items-center"
+      className="flex min-h-[calc(100svh-4rem)] items-start pt-12 sm:pt-16 lg:items-center lg:pt-0"
       srTitle="Aadil Alli, full-stack engineer and infrastructure builder"
       showBadges={false}
       desktopShaderProps={{
@@ -39,7 +39,7 @@ export function Hero() {
       <HeroDitheringContainer className="mx-auto max-w-6xl px-6">
         <HeroDitheringContent>
           <p className="text-center font-mono text-xs text-muted-foreground sm:text-sm lg:text-left">
-            // based in {site.location.toLowerCase()} · full-stack &amp;
+            // full-stack &amp;
             infrastructure
           </p>
 
@@ -54,9 +54,8 @@ export function Hero() {
             descriptionClassName="font-sans text-base leading-relaxed text-foreground sm:text-lg lg:text-xl"
             description={
               <>
-                I build full-stack products end to end, host them myself, and
-                break things on purpose. Recently: first at an Amazon-sponsored
-                CTF.
+                I love full-stack applications, infrastructure, and entrepreneurship. 
+                Recently: first at an Amazon-sponsored CTF.
               </>
             }
           />
@@ -87,7 +86,7 @@ export function Hero() {
 
         {/* One contained orb at every breakpoint: centered square on mobile,
             full right-column on desktop. */}
-        <HeroDitheringVisual className="mx-auto block aspect-square h-auto w-[min(78vw,340px)] lg:mx-0 lg:aspect-auto lg:h-[400px] lg:w-full xl:h-[500px]" />
+        <HeroDitheringVisual className="mx-auto block aspect-square h-auto w-[min(62vw,280px)] lg:mx-0 lg:aspect-auto lg:h-[400px] lg:w-full xl:h-[500px]" />
       </HeroDitheringContainer>
     </HeroDitheringRoot>
   );
