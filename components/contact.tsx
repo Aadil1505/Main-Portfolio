@@ -7,6 +7,7 @@ import { Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { site } from "@/lib/site";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 export function Contact() {
   const [copied, setCopied] = useState(false);
@@ -29,17 +30,27 @@ export function Contact() {
   return (
     <section id="contact" className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-20 text-center sm:py-28 lg:py-32">
-        <p className="font-mono text-xs text-muted-foreground sm:text-sm">
-          // contact
-        </p>
-        <h2 className="mt-4 max-w-[16ch] text-balance font-pixel text-4xl leading-[0.95] tracking-tight uppercase sm:text-5xl md:text-6xl">
-          Got something to <span className="text-primary">break?</span>
-        </h2>
-        <p className="mt-6 max-w-prose text-base leading-relaxed text-foreground text-pretty sm:text-lg">
-          Or build. Let me know. Thanks.
-        </p>
+        <BlurFade inView delay={0}>
+          <p className="font-mono text-xs text-muted-foreground sm:text-sm">
+            // contact
+          </p>
+        </BlurFade>
+        <BlurFade inView delay={0.1} className="mt-4">
+          <h2 className="max-w-[16ch] text-balance font-pixel text-4xl leading-[0.95] tracking-tight uppercase sm:text-5xl md:text-6xl">
+            Got something to <span className="text-primary">break?</span>
+          </h2>
+        </BlurFade>
+        <BlurFade inView delay={0.2} className="mt-6">
+          <p className="max-w-prose text-base leading-relaxed text-foreground text-pretty sm:text-lg">
+            Or build. Let me know. Thanks.
+          </p>
+        </BlurFade>
 
-        <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+        <BlurFade
+          inView
+          delay={0.3}
+          className="mt-9 flex flex-wrap items-center justify-center gap-3"
+        >
           <Button
             asChild
             variant="outline"
@@ -92,20 +103,22 @@ export function Contact() {
             )}
             {copied ? "Copied" : "Copy email"}
           </Button>
-        </div>
+        </BlurFade>
 
         <span aria-live="polite" className="sr-only">
           {copied ? "Email address copied to clipboard" : ""}
         </span>
 
-        <Image
-          src="/daffy-duck-burning-money.webp"
-          alt="Daffy Duck cackling as he gleefully burns a stack of money"
-          width={675}
-          height={500}
-          unoptimized
-          className="mt-14 w-full max-w-2xl rounded-lg border border-border shadow-sm sm:mt-16"
-        />
+        <BlurFade inView delay={0.4} className="mt-14 w-full sm:mt-16">
+          <Image
+            src="/daffy-duck-burning-money.webp"
+            alt="Daffy Duck cackling as he gleefully burns a stack of money"
+            width={675}
+            height={500}
+            unoptimized
+            className="mx-auto w-full max-w-2xl rounded-lg border border-border shadow-sm"
+          />
+        </BlurFade>
       </div>
     </section>
   );

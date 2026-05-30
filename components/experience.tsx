@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Download } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 type Role = {
   org: string;
@@ -57,16 +58,21 @@ export function Experience() {
   return (
     <section id="experience" className="border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-        <p className="font-mono text-xs text-muted-foreground sm:text-sm">
-          // experience
-        </p>
-        <h2 className="mt-4 font-pixel text-2xl leading-tight tracking-tight uppercase sm:text-3xl md:text-4xl">
-          Where I&rsquo;ve <span className="text-primary">worked</span>.
-        </h2>
+        <BlurFade inView delay={0}>
+          <p className="font-mono text-xs text-muted-foreground sm:text-sm">
+            // experience
+          </p>
+        </BlurFade>
+        <BlurFade inView delay={0.1} className="mt-4">
+          <h2 className="font-pixel text-2xl leading-tight tracking-tight uppercase sm:text-3xl md:text-4xl">
+            Where I&rsquo;ve <span className="text-primary">worked</span>.
+          </h2>
+        </BlurFade>
 
         <ol className="mt-12 divide-y divide-border border-y border-border">
-          {roles.map((role) => (
+          {roles.map((role, i) => (
             <li key={`${role.org}-${role.title}`} className="py-8 sm:py-10">
+              <BlurFade inView delay={0.2 + i * 0.1}>
               <div className="flex items-center gap-4">
                 <Image
                   src={role.logo.src}
@@ -106,11 +112,12 @@ export function Experience() {
                   </li>
                 ))}
               </ul>
+              </BlurFade>
             </li>
           ))}
         </ol>
 
-        <div className="mt-12">
+        <BlurFade inView delay={0.2} className="mt-12">
           <Button
             asChild
             variant="outline"
@@ -122,7 +129,7 @@ export function Experience() {
               Download résumé
             </a>
           </Button>
-        </div>
+        </BlurFade>
       </div>
     </section>
   );

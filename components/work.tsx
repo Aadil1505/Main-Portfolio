@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 type ProjectLink = { label: string; href: string };
 
@@ -69,14 +70,22 @@ export function Work() {
   return (
     <section id="work" className="border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-        <p className="font-mono text-xs text-muted-foreground sm:text-sm">
-          // selected work
-        </p>
-        <h2 className="mt-4 font-pixel text-2xl leading-tight tracking-tight uppercase sm:text-3xl md:text-4xl">
-          Things I&rsquo;ve <span className="text-primary">shipped</span>.
-        </h2>
+        <BlurFade inView delay={0}>
+          <p className="font-mono text-xs text-muted-foreground sm:text-sm">
+            // selected work
+          </p>
+        </BlurFade>
+        <BlurFade inView delay={0.1} className="mt-4">
+          <h2 className="font-pixel text-2xl leading-tight tracking-tight uppercase sm:text-3xl md:text-4xl">
+            Things I&rsquo;ve <span className="text-primary">shipped</span>.
+          </h2>
+        </BlurFade>
 
-        <div className="mt-12 grid items-start gap-10 md:mt-16 md:grid-cols-2 lg:gap-16">
+        <BlurFade
+          inView
+          delay={0.2}
+          className="mt-12 grid items-start gap-10 md:mt-16 md:grid-cols-2 lg:gap-16"
+        >
           {/* Accordion index */}
           <Accordion
             type="single"
@@ -176,17 +185,19 @@ export function Work() {
               </motion.div>
             </AnimatePresence>
           </a>
-        </div>
+        </BlurFade>
 
-        <a
-          href={site.links.github}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-16 inline-flex items-center gap-1 font-mono text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
-        >
-          More on GitHub
-          <ArrowUpRight className="size-3.5" />
-        </a>
+        <BlurFade inView delay={0.3} className="mt-16">
+          <a
+            href={site.links.github}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1 font-mono text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
+          >
+            More on GitHub
+            <ArrowUpRight className="size-3.5" />
+          </a>
+        </BlurFade>
       </div>
     </section>
   );

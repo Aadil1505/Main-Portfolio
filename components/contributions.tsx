@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { ContributionCalendar } from "@/components/contribution-calendar";
 import { getContributions } from "@/lib/github-contributions";
 import { site } from "@/lib/site";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 const username = site.links.github.replace(/\/+$/, "").split("/").pop() ?? "";
 
@@ -18,27 +19,31 @@ export async function Contributions() {
   return (
     <section id="contributions" className="border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-        <p className="font-mono text-xs text-muted-foreground sm:text-sm">
-          // contributions
-        </p>
-        <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="font-pixel text-2xl leading-tight tracking-tight uppercase sm:text-3xl md:text-4xl">
-            Always <span className="text-primary">building</span>.
-          </h2>
-          <a
-            href={site.links.github}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1 font-mono text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
-          >
-            @{username}
-            <ArrowUpRight className="size-3.5" />
-          </a>
-        </div>
+        <BlurFade inView delay={0}>
+          <p className="font-mono text-xs text-muted-foreground sm:text-sm">
+            // contributions
+          </p>
+        </BlurFade>
+        <BlurFade inView delay={0.1} className="mt-4">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <h2 className="font-pixel text-2xl leading-tight tracking-tight uppercase sm:text-3xl md:text-4xl">
+              Always <span className="text-primary">building</span>.
+            </h2>
+            <a
+              href={site.links.github}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 font-mono text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
+            >
+              @{username}
+              <ArrowUpRight className="size-3.5" />
+            </a>
+          </div>
+        </BlurFade>
 
-        <div className="mt-10 overflow-hidden">
+        <BlurFade inView delay={0.2} className="mt-10 overflow-hidden">
           <ContributionCalendar data={activities} total={total} />
-        </div>
+        </BlurFade>
       </div>
     </section>
   );

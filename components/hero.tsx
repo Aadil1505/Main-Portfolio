@@ -3,6 +3,7 @@
 import { ArrowDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { BlurFade } from "@/components/ui/blur-fade";
 import {
   HeroDitheringRoot,
   HeroDitheringContainer,
@@ -38,55 +39,65 @@ export function Hero() {
     >
       <HeroDitheringContainer className="mx-auto max-w-6xl px-6">
         <HeroDitheringContent>
-          <p className="text-center font-mono text-xs text-muted-foreground sm:text-sm lg:text-left">
-            // full-stack &amp;
-            infrastructure
-          </p>
+          <BlurFade delay={0}>
+            <p className="text-center font-mono text-xs text-muted-foreground sm:text-sm lg:text-left">
+              // full-stack &amp;
+              infrastructure
+            </p>
+          </BlurFade>
 
-          <HeroDitheringHeading
-            className="pt-2 sm:pt-2 lg:pt-0"
-            title="AADIL"
-            subtitle={<span className="text-primary">ALLI</span>}
-            headingClassName="text-6xl leading-[0.92] tracking-[-0.02em] sm:text-7xl md:text-8xl lg:tracking-[-0.02em] xl:text-8xl 2xl:text-[8.5rem]"
-          />
+          <BlurFade delay={0.15}>
+            <HeroDitheringHeading
+              className="pt-2 sm:pt-2 lg:pt-0"
+              title="AADIL"
+              subtitle={<span className="text-primary">ALLI</span>}
+              headingClassName="text-6xl leading-[0.92] tracking-[-0.02em] sm:text-7xl md:text-8xl lg:tracking-[-0.02em] xl:text-8xl 2xl:text-[8.5rem]"
+            />
+          </BlurFade>
 
-          <HeroDitheringDescription
-            descriptionClassName="font-sans text-base leading-relaxed text-foreground sm:text-lg lg:text-xl"
-            description={
-              <>
-                I love full-stack applications, infrastructure, and entrepreneurship. 
-                Recently: first at an Amazon-sponsored CTF.
-              </>
-            }
-          />
+          <BlurFade delay={0.3}>
+            <HeroDitheringDescription
+              descriptionClassName="font-sans text-base leading-relaxed text-foreground sm:text-lg lg:text-xl"
+              description={
+                <>
+                  I love full-stack applications, infrastructure, and entrepreneurship.
+                </>
+              }
+            />
+          </BlurFade>
 
-          <HeroDitheringActions>
-            <div className="flex flex-row flex-wrap items-center gap-3">
-              <Button
-                asChild
-                size="lg"
-                className="h-11 gap-2 px-5 font-pixel text-[0.95rem] tracking-tight"
-              >
-                <a href="#work">
-                  View work
-                  <ArrowDown className="size-4" />
-                </a>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="h-11 gap-2 px-5 font-pixel text-[0.95rem] tracking-tight"
-              >
-                <a href={`mailto:${site.email}`}>Get in touch</a>
-              </Button>
-            </div>
-          </HeroDitheringActions>
+          <BlurFade delay={0.45}>
+            <HeroDitheringActions>
+              <div className="flex flex-row flex-wrap items-center gap-3">
+                <Button
+                  asChild
+                  size="lg"
+                  className="h-11 gap-2 px-5 font-pixel text-[0.95rem] tracking-tight"
+                >
+                  <a href="#work">
+                    View work
+                    <ArrowDown className="size-4" />
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="h-11 gap-2 px-5 font-pixel text-[0.95rem] tracking-tight"
+                >
+                  <a href={`mailto:${site.email}`}>Get in touch</a>
+                </Button>
+              </div>
+            </HeroDitheringActions>
+          </BlurFade>
         </HeroDitheringContent>
 
         {/* One contained orb at every breakpoint: centered square on mobile,
-            full right-column on desktop. */}
-        <HeroDitheringVisual className="mx-auto block aspect-square h-auto w-[min(62vw,280px)] lg:mx-0 lg:aspect-auto lg:h-[400px] lg:w-full xl:h-[500px]" />
+            full right-column on desktop. Threaded into the text cascade with a
+            matching blur-fade so the whole hero reveals as one. */}
+        <BlurFade delay={0.4}>
+          <HeroDitheringVisual className="mx-auto block aspect-square h-auto w-[min(62vw,280px)] lg:mx-0 lg:aspect-auto lg:h-[400px] lg:w-full xl:h-[500px]" />
+        </BlurFade>
       </HeroDitheringContainer>
     </HeroDitheringRoot>
   );
